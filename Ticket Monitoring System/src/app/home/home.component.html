@@ -1,0 +1,78 @@
+
+<style>
+div {
+  width: 10px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
+}
+</style>
+
+
+
+<h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My IFB App</h1>
+<hr>
+
+
+<h2>Hi Mr. {{currentUser.firstName}}!</h2>
+<hr>
+<p> <b> Current Date and Time: </b> {{now}}</p>
+
+
+<hr>
+<p> <b> Last Refreshed at: </b> {{freezenow}} </p>
+<hr>
+
+<h5 *ngFor = "let ticket of tickets" >
+
+  <h5 style="background-color:DodgerBlue;">
+    <b > {{ticket.name}}</b>
+  </h5>
+  <br>
+  <p style="display:inline">
+    <b style="background-color:Orange;">Initiated </b> 
+  </p>
+    &nbsp;&nbsp;&nbsp;
+   <p style="display:inline">
+    <b style="background-color:LightGray;">Unprocessed </b>
+  </p>
+  &nbsp;&nbsp;&nbsp;
+  <p style="display:inline">
+   <b style="background-color:MediumSeaGreen;" >Success </b> 
+  </p>
+  &nbsp;&nbsp;&nbsp;
+  <p style="display:inline">
+    <b style="background-color:Tomato;" >Failed </b>
+  </p>
+
+  <br>
+  <br>
+  &nbsp;&nbsp;
+  <div style="display:inline">{{ticket.initiated}}</div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <div style="display:inline">{{ticket.unprocessed}}</div> 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <div style="display:inline">{{ticket.success}}</div> 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <div style="display:inline">{{ticket.failed}}</div>
+
+   <br>
+   <br>
+   <br>
+
+<h4 style="display:inline"><a> Details </a></h4>
+
+  <br> 
+
+  <hr>
+  <br>
+
+</h5>
+
+<h5> Last CRM state created: </h5>
+<h5> Last acknowledgement received: </h5>
+<h5> Last CRM sync: </h5>
+
+
+<h3><a [routerLink]="['/login']">Logout</a></h3>
+
